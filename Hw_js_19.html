@@ -6,7 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
-    
+    <iframe src="about:blak"></iframe>
+    <iframe src="about:blak"></iframe>
+    <iframe src="about:blak" name="frame 3"></iframe>
+    <button onclick="load1()">Frame 1</button>
+    <button onclick="load2()">Frame 2</button>
+    <button onclick="load3()">Frame 3</button>
+    <script>
+        function load1 (){
+            window.frames[0].location = "https://mystat.itstep.org/ua/auth/login/index"
+        }
+        function load2 (){
+            window.frames[1].location = "https://www.google.com/"
+        }
+
+    </script>
 </body>
 </html>
