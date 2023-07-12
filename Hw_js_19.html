@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <iframe src="about:blak"></iframe>
-    <iframe src="about:blak"></iframe>
-    <iframe src="about:blak" name="frame 3"></iframe>
-    <button onclick="load1()">Frame 1</button>
-    <button onclick="load2()">Frame 2</button>
-    <button onclick="load3()">Frame 3</button>
-    <script>
-        function load1 (){
-            window.frames[0].location = "https://mystat.itstep.org/ua/auth/login/index"
-        }
-        function load2 (){
-            window.frames[1].location = "https://www.google.com/"
+    <title>News List</title>
+    <style>
+        .bg {
+            background-color: rgb(240, 233, 210);
         }
 
-    </script>
+        .news-item {
+            margin-bottom: 10px;
+        }
+
+        .news-item button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div id="news-list">
+            <div class="news-item">
+                <h2>What is lorem impus?</h2>
+                <button onclick="removeNewsItem(this)">X [remove]</button>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero aut ipsum quibusdam, ducimus aliquam
+                    vel debitis eum? Rerum ratione eos ab! Ipsam alias sed rem, omnis autem minus! Sint perspiciatis
+                    fugiat natus porro culpa neque at qui, harum cupiditate, unde aliquid? Architecto ratione blanditiis
+                    deleniti eveniet eligendi ullam, consequuntur dignissimos.</p>
+                <hr>
+            </div>
+            <div id="news-list">
+                <div class="news-item">
+                    <h2>Why do we use it?</h2>
+                    <button onclick="removeNewsItem(this)">X [remove]</button>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero aut ipsum quibusdam, ducimus
+                        aliquam vel debitis eum? Rerum ratione eos ab! Ipsam alias sed rem, omnis autem minus! Sint
+                        perspiciatis fugiat natus porro culpa neque at qui, harum cupiditate, unde aliquid? Architecto
+                        ratione blanditiis deleniti eveniet eligendi ullam, consequuntur dignissimos.</p>
+                    <hr>
+                </div>
+                <div id="news-list">
+                    <div class="news-item">
+                        <h2>Where dose it come from?</h2>
+                        <button onclick="removeNewsItem(this)">X [remove]</button>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero aut ipsum quibusdam, ducimus
+                            aliquam vel debitis eum? Rerum ratione eos ab! Ipsam alias sed rem, omnis autem minus! Sint
+                            perspiciatis fugiat natus porro culpa neque at qui, harum cupiditate, unde aliquid?
+                            Architecto ratione blanditiis deleniti eveniet eligendi ullam, consequuntur dignissimos.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                function removeNewsItem(button) {
+                    var newsItem = button.parentNode;
+                    newsItem.parentNode.removeChild(newsItem);
+                }
+            </script>
 </body>
+
 </html>
