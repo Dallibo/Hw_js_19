@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    td, th {
+      border: 1px solid #b3b3b3;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <table id="myTable">
+    <tr>
+        <th>Firsname</th>
+        <th>Lastname</th>
+        <th>Company</th>
+    </tr>
+    <tr>
+      <td>Bill</td>
+      <td>Gates</td>
+      <td>Microsoft</td>
+    </tr>
+    <tr>
+      <td>Timothy</td>
+      <td>Cook</td>
+      <td>Apple</td>
+    </tr>
+    <tr>
+        <td>Larry</td>
+        <td>Page</td>
+        <td>Google</td>
+      </tr>
+      <tr>
+        <td>Mark</td>
+        <td>Zuckerberg</td>
+        <td>Facebook</td>
+      </tr>
+  </table>
+
+  <script>
+    var table = document.getElementById("myTable");
+
+    table.addEventListener("mouseover", function(event) {
+      var target = event.target;
+      if (target.tagName === "TD" || target.tagName === "TH") {
+        target.style.backgroundColor = "chocolate";
+      }
+    });
+
+    table.addEventListener("mouseout", function(event) {
+      var target = event.target;
+      if (target.tagName === "TD" || target.tagName === "TH") {
+        target.style.backgroundColor = "";
+      }
+    });
+  </script>
+</body>
+</html>

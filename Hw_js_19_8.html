@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Disable Text Selection and Context Menu</title>
+  <style>
+    body {
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lorem ipsum dolor sit.</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate earum deleniti neque dolore, quia ducimus magnam ipsum consequatur, doloremque quo eligendi at omnis molestias officiis, adipisci consectetur labore. Commodi voluptas neque tenetur architecto ad doloribus! Ullam amet dolore et esse. Vel voluptatum perspiciatis autem minus ut tempore, sequi eaque reprehenderit illum possimus? Laudantium hic minima facere soluta cumque? Error soluta minus, iure minima obcaecati totam tenetur provident dolor distinctio temporibus fugit perferendis vel, quas laborum, quidem fuga? Dolor quos consequuntur accusantium, ex mollitia, maiores laboriosam asperiores vitae animi eum nisi commodi ab accusamus in quas facilis, minus delectus ullam hic?</p>
+
+  <script>
+    window.addEventListener("contextmenu", function(event) {
+      event.preventDefault();
+    });
+  </script>
+</body>
+</html>
