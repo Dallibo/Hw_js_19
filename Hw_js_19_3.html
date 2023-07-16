@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .d1 {
+            text-align: center;
+            background-color: bisque;
+            width: 30%;
+        }
+
+        .button {
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d1">
+        <button class="button" onclick="hideText()">Hide / Show Text</button>
+        <div id="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam nesciunt aut accusamus, totam,
+            ipsam quidem sit tempora corrupti maiores temporibus rem aliquid fugit reiciendis esse labore! Quam quia
+            voluptatum officiis nemo animi placeat minima id laudantium asperiores, libero expedita illum blanditiis
+            beatae reiciendis voluptatem voluptatibus veniam molestias tenetur. Rerum, dignissimos.</div>
+    </div>
+
+    <script>
+        function hideText() {
+            var text = document.getElementById("text");
+            if (text.style.display === "none") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
